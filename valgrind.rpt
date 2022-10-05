@@ -1,0 +1,40 @@
+==127368== Memcheck, a memory error detector
+==127368== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==127368== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==127368== Command: ./bin/run.out input2.txt saida.txt
+==127368== Parent PID: 124448
+==127368== 
+==127368== Conditional jump or move depends on uninitialised value(s)
+==127368==    at 0x10B2E2: listaUsuarios::cadastraUsuario[abi:cxx11](int) (listausuarios.cpp:31)
+==127368==    by 0x10C3F7: main (main.cpp:58)
+==127368== 
+==127368== 
+==127368== HEAP SUMMARY:
+==127368==     in use at exit: 34,659 bytes in 1,731 blocks
+==127368==   total heap usage: 15,438 allocs, 13,707 frees, 2,543,231 bytes allocated
+==127368== 
+==127368== 219 (16 direct, 203 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 6
+==127368==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127368==    by 0x10BDA7: main (main.cpp:11)
+==127368== 
+==127368== 34,440 (20,664 direct, 13,776 indirect) bytes in 861 blocks are definitely lost in loss record 6 of 6
+==127368==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==127368==    by 0x10B20D: listaUsuarios::cadastraUsuario[abi:cxx11](int) (listausuarios.cpp:20)
+==127368==    by 0x10C3F7: main (main.cpp:58)
+==127368== 
+==127368== LEAK SUMMARY:
+==127368==    definitely lost: 20,680 bytes in 862 blocks
+==127368==    indirectly lost: 13,979 bytes in 869 blocks
+==127368==      possibly lost: 0 bytes in 0 blocks
+==127368==    still reachable: 0 bytes in 0 blocks
+==127368==         suppressed: 0 bytes in 0 blocks
+==127368== 
+==127368== Use --track-origins=yes to see where uninitialised values come from
+==127368== ERROR SUMMARY: 4 errors from 3 contexts (suppressed: 0 from 0)
+==127368== 
+==127368== 2 errors in context 1 of 3:
+==127368== Conditional jump or move depends on uninitialised value(s)
+==127368==    at 0x10B2E2: listaUsuarios::cadastraUsuario[abi:cxx11](int) (listausuarios.cpp:31)
+==127368==    by 0x10C3F7: main (main.cpp:58)
+==127368== 
+==127368== ERROR SUMMARY: 4 errors from 3 contexts (suppressed: 0 from 0)
