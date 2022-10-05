@@ -11,6 +11,7 @@ caixaEntrada::~caixaEntrada(){
 
     ultimoEmail = primeiroEmail;
     delete(primeiroEmail);
+    //
 }
 
 
